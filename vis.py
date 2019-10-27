@@ -20,6 +20,10 @@ def vis_pie(p, attr):
     ax1.pie(list(counts.values()), explode=explode, labels=tup, autopct='%1.1f%%', shadow=False, startangle=90)
     ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
     ax1.set_title("Diversity of Portfolio: {} of Investments".format(attr_to_english(attr)))
+    ax1.legend (
+            ["{0}: ${1}.00".format(key, counts[key]) for key in list(counts.keys())],
+            title="Value"
+            )
     plt.show()
 
 

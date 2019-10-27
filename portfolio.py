@@ -6,7 +6,8 @@ Please use 'pip install requests' to add it to your python libraries.
 
 
 class Portfolio():
-    """docstring for Portfolio.
+    """
+    docstring for Portfolio.
         Instance vars:
         params - passed into the API requests
         p - a json of the portfolio
