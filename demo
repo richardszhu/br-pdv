@@ -1,0 +1,6 @@
+attrs: 
+country, currency, exchangeAcronym, issFtse1Industry, issFtse3Sector, assetType
+
+sample portfolios: 
+'BLK GOOGL RKUNY BABA, 1200 100 400 500, country'
+'SPY MINT ATVI BIDU CELG PCAR, 450 400 400 300 300 600, assetType'
