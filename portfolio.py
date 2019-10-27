@@ -36,7 +36,7 @@ class Portfolio():
 
         portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/security-data", params={'identifiers': self.params})
         self.p = portfolioAnalysisRequest.json  # get as json object
-        self.p_stocks = (self.p)()['resultMap']["SECURITY"][:len(tickers_list)] # cut off to take care of "duplicate" stocks that share the same ticker
+        self.p_stocks = (self.p)()['resultMap']["SECURITY"][:len(tickers_list)] # cut off "duplicate" stocks that share the same ticker
 
     def get_counts(self, attr):
         """
