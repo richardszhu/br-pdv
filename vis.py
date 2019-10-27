@@ -1,6 +1,6 @@
 """
-Must install MatPlotLib to function
-Installation instructions: https://matplotlib.org/users/installing.html
+Requires MatPlotLib
+https://matplotlib.org/users/installing.html
 """
 
 import matplotlib.pyplot as plt
