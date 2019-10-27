@@ -14,12 +14,6 @@ Load vis_clean.ipynb in Jupyter Notebooks
 
 Create a front end GUI to make it easier to construct a portfolio
 
-Options of what to measure diversity of: country, currency, exchangeAcronym, issFtse1Industry, issFtse3Sector
-
-create a list of countries in the portfolio and find a way to calculate the percentage + number of stocks from those countries
-
-visualize the diversity in NumPy or another tools
-
 ## Resources Used
 http://rockthecode.io/api/
 
