@@ -6,6 +6,7 @@ Made by Richard Zhu, Riley Dyer, Shreyash Sridhar, and David Zhu
 Utilizing BlackRock's Security Data API
 """
 import requests
+from operator import itemgetter
 
 class Portfolio():
     """
@@ -27,15 +28,15 @@ class Portfolio():
             self.values = values
         else:
             self.values = [1 for _ in tickers_list]
+        self.tickers_list, self.values = [list(x) for x in zip(*sorted(zip(tickers_list, self.values), key=itemgetter(0)))]
 
-        self.values = values
-        self.params = los_to_brparams(tickers_list)
+        self.params = los_to_brparams(self.tickers_list)
 
         portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/security-data", params={'identifiers': self.params})
         self.p = portfolioAnalysisRequest.json  # get as json object
         self.p_stocks = (self.p)()['resultMap']["SECURITY"][:len(tickers_list)] # cut off to take care of "duplicate" stocks that share the same ticker
 
-    def get_counts(self, attr_string):
+    def get_counts(self, attr):
         """
         Returns dictionary: {Security Attribute: Count}
 
@@ -46,14 +47,18 @@ class Portfolio():
 
         a_counts = {}
         for i in range(len(self.p_stocks)):
-            c = self.p_stocks[i][attr_string]
+            c = self.p_stocks[i][attr]
             a_counts[c] = self.values[i] + a_counts.get(c, 0)
         return a_counts
 
 
+def alphabetize(tickers_list, values):
+    tickers_list.sort
 
 def los_to_brparams(los):
     params = ''
     for ticker in los:
         params += "ticker:{},".format(ticker.upper()) #tickers have to be uppercase
     return params[:-1]  # cut off the last comma
+
+print (Portfolio(['SPY', 'RKUNY'], [300, 500]).get_counts("assetType"))
