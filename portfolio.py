@@ -47,7 +47,9 @@ class Portfolio():
 
         a_counts = {}
         for i in range(len(self.p_stocks)):
-            c = self.p_stocks[i][attr]
+            if attr not in p_stocks[i]
+
+            c = self.p_stocks[i].get(attr, "No {}".format(attr))
             a_counts[c] = self.values[i] + a_counts.get(c, 0)
         return a_counts
 
