@@ -10,9 +10,8 @@ x = portfolioAnalysisRequest.text # get in text string format
 portfolio = portfolioAnalysisRequest.json # get as json object
 p_stocks = portfolio()['resultMap']["SECURITY"]
 
-list_of_countries = [stock["country"] for stock in p_stocks]
 country_count = {}
-for c in list_of_countries:
-    country_count[c] = 1 + country_count.get(c, 0)
+for stock in p_stocks:
+    country_count[c] = 1 + country_count.get(stock["country"], 0)
 #print(y())
 print(country_count)
