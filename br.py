@@ -4,21 +4,48 @@ For the examples we are using 'requests' which is a popular minimalistic python 
 Please use 'pip install requests' to add it to your python libraries.
 """
 
-portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/security-data", params= {'identifiers' :"ticker:AAPL,ticker:MSFT,ticker:RKUNY"})
-#make a way to pass in tickers
-x = portfolioAnalysisRequest.text # get in text string format
-portfolio = portfolioAnalysisRequest.json # get as json object
-p_stocks = portfolio()['resultMap']["SECURITY"]
 
-def get_counts(attr_string):
-    """
-    returns dictionary, (Attribute, Count)
-    """
+class Portfolio():
+    """docstring for Portfolio.
+        Instance vars:
+        params - passed into the API requests
+        p - a json of the portfolio
+        p_stocks - the list of stocks in the portfolio, and which ones are
+        num_tickers - len(tickers)
 
-    a_counts = {}
-    for stock in p_stocks:
-        c = stock[attr_string]
-        a_counts[c] = 1 + a_counts.get(c, 0)
-    return a_counts
+     """
 
-print(get_counts("country"))
+    def __init__(self, tickers_list):
+        """
+        tickers is a list of strings, each string being a ticker
+
+        """
+        # take list of tickers and convert into a string that can be passed into the API
+        # end result example: "ticker:AAPL,ticker:MSFT,ticker:RKUNY"
+        self.num_tickers = len(tickers_list)
+
+        self.params = ''
+        for ticker in tickers_list:
+            self.params += "ticker:{},".format(ticker.upper())
+        self.params = self.params[:-1]  # cut off the last comma
+
+        portfolioAnalysisRequest = requests.get(
+            "https://www.blackrock.com/tools/hackathon/security-data", params={'identifiers': self.params})
+        self.p = portfolioAnalysisRequest.json  # get as json object
+        self.p_stocks = (self.p)()['resultMap']["SECURITY"][:self.num_tickers] # cut off to take care of "duplicate" stocks that share the same ticker
+
+    def get_counts(self, attr_string):
+        """
+        returns dictionary: {Security Attribute: Count}
+        Security attribute is stuff like country, currency, etc
+        country, currency, exchangeAcronym, issFtse1Industry, issFtse3Sector
+        """
+
+        a_counts = {}
+        for stock in self.p_stocks:
+            c = stock[attr_string]
+            a_counts[c] = 1 + a_counts.get(c, 0)
+        return a_counts
+
+
+print(Portfolio(['aapl', 'MsFt', 'RKUNY']).get_counts("country"))
