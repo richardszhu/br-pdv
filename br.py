@@ -23,11 +23,7 @@ class Portfolio():
         # take list of tickers and convert into a string that can be passed into the API
         # end result example: "ticker:AAPL,ticker:MSFT,ticker:RKUNY"
         self.num_tickers = len(tickers_list)
-
-        self.params = ''
-        for ticker in tickers_list:
-            self.params += "ticker:{},".format(ticker.upper()) #tickers have to be uppercase
-        self.params = self.params[:-1]  # cut off the last comma
+        self.params = los_to_brparams(tickers_list)
 
         portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/security-data", params={'identifiers': self.params})
         self.p = portfolioAnalysisRequest.json  # get as json object
@@ -46,5 +42,11 @@ class Portfolio():
             a_counts[c] = 1 + a_counts.get(c, 0)
         return a_counts
 
+
+def los_to_brparams(los):
+    params = ''
+    for ticker in los:
+        params += "ticker:{},".format(ticker.upper()) #tickers have to be uppercase
+    return params[:-1]  # cut off the last comma
 
 print(Portfolio(['aapl', 'MsFt', 'RKUNY']).get_counts("country"))
