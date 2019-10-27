@@ -2,5 +2,18 @@ attrs:
 country, currency, exchangeAcronym, issFtse1Industry, issFtse3Sector, assetType
 
 sample portfolios: 
-'BLK GOOGL RKUNY BABA, 1200 100 400 500, country'
-'SPY MINT ATVI BIDU CELG PCAR, 450 400 400 300 300 600, assetType'
+BLK GOOGL RKUNY BABA, 1200 100 400 500, country
+SPY MINT SCHO BIDU CELG PCAR, 450 400 400 300 300 600, assetType
+AAPL celg PCG, 1200 400 800, issFtse1Industry
+
+secs = ["blk", "googl", "rkuny", baba"]
+worths = [1200, 100, 400, 500]
+attr = "country"
+
+secs = ["SPY", "MINT", "SCHO", "BIDU", "CELG", "PCAR", "blk", "googl", "rkuny", baba"]
+worths = [1500, 800, 1000, 500, 500, 30, 1200, 100, 400, 500]
+attr = "assetType"
+
+secs = ["AAPL", "CELG", "PCG"]
+worths = [1200, 400, 800]
+attr = "issFtse1Industry"
