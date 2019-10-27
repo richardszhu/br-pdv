@@ -1,4 +1,4 @@
-# CalHacks 6.0 Project: Investment Portfolio Security Diversity Visualization
+# CalHacks 6.0 Project: Investment Portfolio Diversity Visualization
 ## REQUIRES MatPlotLib
 Installation instructions: https://matplotlib.org/users/installing.html
 
