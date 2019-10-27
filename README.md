@@ -1,5 +1,5 @@
 # BlackRock API: Portfolio Diversity Visualization Tool
-## Created by Riley Dyer, Richard Zhu, Shreyash Sridhar, and David Zhu, at CalHacks 6.0
+Created by Richard Zhu, Riley Dyer, David Zhu, and Shreyash Sridhar at CalHacks 6.0
 ## REQUIRES MatPlotLib
 Installation instructions: https://matplotlib.org/users/installing.html
 
