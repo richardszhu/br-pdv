@@ -1,0 +1,18 @@
+JSX: mix of HTML and JS
+Advanced event handlers
+
+{
+whats inside here is JS
+}
+
+
+React: defines new tags
+desribe behavior and output
+alows for data flow between components
+state - in component
+	this.setState
+this.state
+
+props: passed from parent to child
+this.props
+Functional: passed as parameter
