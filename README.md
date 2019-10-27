@@ -1,7 +1,6 @@
-## CalHacks 6.0 Project: Investment Portfolio Security Diversity Visualization
-
-# REQUIRES MatPlotLib
-# Installation instructions: https://matplotlib.org/users/installing.html
+# CalHacks 6.0 Project: Investment Portfolio Security Diversity Visualization
+## REQUIRES MatPlotLib
+Installation instructions: https://matplotlib.org/users/installing.html
 
 Created by Riley Dyer, Richard Zhu, Shreyash Sridhar, and David Zhu
 
