@@ -1,14 +1,15 @@
-import requests
 """
 For the examples we are using 'requests' which is a popular minimalistic python library for making HTTP requests.
 Please use 'pip install requests' to add it to your python libraries.
-"""
 
+Made by Richard Zhu, Riley Dyer, Shreyash Sridhar, and David Zhu
+Utilizing BlackRock's Security Data API
+"""
+import requests
 
 class Portfolio():
     """
-    docstring for Portfolio.
-        Instance vars:
+    Instance vars:
         params - passed into the API requests
         p - a json of the portfolio
         p_stocks - the list of stocks in the portfolio, and which ones are
@@ -18,9 +19,10 @@ class Portfolio():
     def __init__(self, tickers_list, values=[]):
         """
         tickers_list is a list of strings, each string being a ticker
+
+        Takes list of tickers and converts it into a string that can be passed into the API
+        Example of passable string: "ticker:AAPL,ticker:MSFT,ticker:RKUNY"
         """
-        # take list of tickers and convert into a string that can be passed into the API
-        # end result example: "ticker:AAPL,ticker:MSFT,ticker:RKUNY"
         if values:
             self.values = values
         else:
@@ -35,9 +37,11 @@ class Portfolio():
 
     def get_counts(self, attr_string):
         """
-        returns dictionary: {Security Attribute: Count}
-        Security attribute is stuff like country, currency, etc
+        Returns dictionary: {Security Attribute: Count}
+
+        Security attribute is stuff like:
         country, currency, exchangeAcronym, issFtse1Industry, issFtse3Sector, assetType
+        All attributes: https://www.blackrock.com/tools/api-tester/hackathon?apiType=securityData
         """
 
         a_counts = {}

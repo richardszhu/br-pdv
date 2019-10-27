@@ -6,6 +6,9 @@ Installation instructions: https://matplotlib.org/users/installing.html
 import matplotlib.pyplot as plt
 from portfolio import *
 
+#strs of the attribute names
+english_attrs = {"exchangeAcronym": "Exchange", "issFtse1Industry": "Industry",
+                 "issFtse3Sector": "Sector",  "assetType": "Asset Type"}
 
 def vis_pie(p, attr):
     """
@@ -16,12 +19,11 @@ def vis_pie(p, attr):
 
     fig1, ax1 = plt.subplots()
     ax1.pie(list(counts.values()),
-            explode=[0] * len(counts), 
+            explode=[0] * len(counts),
             labels=tuple(counts),
             autopct='%1.1f%%',
             shadow=False,
-            startangle=90)
-    # Equal aspect ratio ensures that pie is drawn as a circle.
+            startangle=90) # Equal aspect ratio ensures that pie is drawn as a circle.
     ax1.axis('equal')
     ax1.set_title("Diversity of Portfolio: {} of Investments".format(
         attr_to_english(attr)))
@@ -29,14 +31,10 @@ def vis_pie(p, attr):
                title="Value",
                bbox_to_anchor=(1, 0),
                loc="center right",
-               bbox_transform=plt.gcf().transFigure)
+               bbox_transform=plt.gcf().transFigure) #this part is so that it fits in iPython
     plt.subplots_adjust(left=0.0, bottom=0.1, right=0.45)
 
     plt.show()
-
-
-english_attrs = {"exchangeAcronym": "Exchange", "issFtse1Industry": "Industry",
-                 "issFtse3Sector": "Sector",  "assetType": "Asset Type"}
 
 
 def attr_to_english(attr):
