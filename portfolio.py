@@ -11,22 +11,26 @@ class Portfolio():
         params - passed into the API requests
         p - a json of the portfolio
         p_stocks - the list of stocks in the portfolio, and which ones are
-        num_tickers - len(tickers)
+        values - list of worth of corresponding stock is in the portfolio
      """
 
-    def __init__(self, tickers_list):
+    def __init__(self, tickers_list, values=[]):
         """
-        tickers is a list of strings, each string being a ticker
-
+        tickers_list is a list of strings, each string being a ticker
         """
         # take list of tickers and convert into a string that can be passed into the API
         # end result example: "ticker:AAPL,ticker:MSFT,ticker:RKUNY"
-        self.num_tickers = len(tickers_list)
+        if values:
+            self.values = values
+        else:
+            self.values = [1 for _ in tickers_list]
+
+        self.values = values
         self.params = los_to_brparams(tickers_list)
 
         portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/security-data", params={'identifiers': self.params})
         self.p = portfolioAnalysisRequest.json  # get as json object
-        self.p_stocks = (self.p)()['resultMap']["SECURITY"][:self.num_tickers] # cut off to take care of "duplicate" stocks that share the same ticker
+        self.p_stocks = (self.p)()['resultMap']["SECURITY"][:len(tickers_list)] # cut off to take care of "duplicate" stocks that share the same ticker
 
     def get_counts(self, attr_string):
         """
@@ -36,10 +40,11 @@ class Portfolio():
         """
 
         a_counts = {}
-        for stock in self.p_stocks:
-            c = stock[attr_string]
-            a_counts[c] = 1 + a_counts.get(c, 0)
+        for i in range(len(self.p_stocks)):
+            c = self.p_stocks[i][attr_string]
+            a_counts[c] = self.values[i] + a_counts.get(c, 0)
         return a_counts
+
 
 
 def los_to_brparams(los):
