@@ -2,13 +2,9 @@
 ## REQUIRES MatPlotLib
 Installation instructions: https://matplotlib.org/users/installing.html
 
+Utilizes Blackrock API to "fetch data" and create a tool to visualize diversity of numerous security data attributes of an investment portfolio, including global diversity and sector diversity
+
 Created by Riley Dyer, Richard Zhu, Shreyash Sridhar, and David Zhu
-
-Utilized Blackrock API to "fetch data" and create a tool to visualize diversity of numerous security data attributes of an investment portfolio, including global diversity and sector diversity
-
-http://rockthecode.io/api/
-
-https://www.blackrock.com/tools/api-tester/hackathon?apiType=securityData
 
 ## To Do:
 
@@ -20,4 +16,7 @@ create a list of countries in the portfolio and find a way to calculate the perc
 
 visualize the diversity in NumPy or another tools
 
-po
+## Resources Used
+http://rockthecode.io/api/
+
+https://www.blackrock.com/tools/api-tester/hackathon?apiType=securityData
