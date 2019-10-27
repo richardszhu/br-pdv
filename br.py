@@ -12,6 +12,6 @@ p_stocks = portfolio()['resultMap']["SECURITY"]
 
 country_count = {}
 for stock in p_stocks:
-    country_count[c] = 1 + country_count.get(stock["country"], 0)
-#print(y())
+    c = stock["country"]
+    country_count[c] = 1 + country_count.get(c, 0)
 print(country_count)
