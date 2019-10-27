@@ -53,10 +53,6 @@ class Portfolio():
             a_counts[c] = self.values[i] + a_counts.get(c, 0)
         return a_counts
 
-
-def alphabetize(tickers_list, values):
-    tickers_list.sort
-
 def los_to_brparams(los):
     params = ''
     for ticker in los:
