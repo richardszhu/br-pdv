@@ -12,7 +12,6 @@ class Portfolio():
         p - a json of the portfolio
         p_stocks - the list of stocks in the portfolio, and which ones are
         num_tickers - len(tickers)
-
      """
 
     def __init__(self, tickers_list):
