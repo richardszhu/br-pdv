@@ -63,4 +63,4 @@ def los_to_brparams(los):
         params += "ticker:{},".format(ticker.upper()) #tickers have to be uppercase
     return params[:-1]  # cut off the last comma
 
-print (Portfolio(['SPY', 'RKUNY'], [300, 500]).get_counts("assetType"))
+#print (Portfolio(['SPY', 'RKUNY'], [300, 500]).get_counts("assetType"))
