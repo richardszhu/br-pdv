@@ -28,6 +28,8 @@ class Portfolio():
             self.values = values
         else:
             self.values = [1 for _ in tickers_list]
+
+        #https://stackoverflow.com/a/13668413 Needed to keep order in sync with API
         self.tickers_list, self.values = [list(x) for x in zip(*sorted(zip(tickers_list, self.values), key=itemgetter(0)))]
 
         self.params = los_to_brparams(self.tickers_list)
