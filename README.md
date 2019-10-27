@@ -1,4 +1,4 @@
-# Investment Portfolio Diversity Visualization Tool
+# BlackRock API: Portfolio Diversity Visualization Tool
 ## REQUIRES MatPlotLib
 Installation instructions: https://matplotlib.org/users/installing.html
 
