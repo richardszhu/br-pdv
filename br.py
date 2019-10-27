@@ -14,6 +14,7 @@ def get_counts(attr_string):
     """
     returns dictionary, (Attribute, Count)
     """
+
     a_counts = {}
     for stock in p_stocks:
         c = stock[attr_string]
