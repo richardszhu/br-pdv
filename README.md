@@ -4,7 +4,7 @@ Blackrock API
 
 Created by Riley Dyer, Shreyash Sridhar, David Zhu, Richard Zhu, and Richard
 
-Utilized Blackrock API to "fetch data" and create a tool to visualize diversity of different aspects of portfolio
+Utilized Blackrock API to "fetch data" and create a tool to visualize diversity of various data security attributes of an investment portfolio, including global diversity and sector diversity
 
 http://rockthecode.io/api/
 
