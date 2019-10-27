@@ -10,9 +10,9 @@ Created by Riley Dyer, Richard Zhu, Shreyash Sridhar, and David Zhu, at CalHacks
 Load vis_clean.ipynb in Jupyter Notebooks
 
 
-## To Do:
+## Developer To Do:
 
-make a way to pass in tickers to create a portfolio. Possibly a front end.
+Create a front end GUI to make it easier to construct a portfolio
 
 Options of what to measure diversity of: country, currency, exchangeAcronym, issFtse1Industry, issFtse3Sector
 
