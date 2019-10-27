@@ -1,6 +1,7 @@
-# ch19
-Blackrock API
+## CalHacks 6.0 Project: Investment Portfolio Security Diversity Visualization
 
+# REQUIRES MatPlotLib
+# Installation instructions: https://matplotlib.org/users/installing.html
 
 Created by Riley Dyer, Richard Zhu, Shreyash Sridhar, and David Zhu
 
@@ -10,7 +11,9 @@ http://rockthecode.io/api/
 
 https://www.blackrock.com/tools/api-tester/hackathon?apiType=securityData
 
-TO DO: make a way to pass in tickers to create a portfolio. Possibly a front end.
+## To Do:
+
+make a way to pass in tickers to create a portfolio. Possibly a front end.
 
 Options of what to measure diversity of: country, currency, exchangeAcronym, issFtse1Industry, issFtse3Sector
 
