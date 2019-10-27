@@ -32,7 +32,7 @@ class Portfolio():
         """
         returns dictionary: {Security Attribute: Count}
         Security attribute is stuff like country, currency, etc
-        country, currency, exchangeAcronym, issFtse1Industry, issFtse3Sector
+        country, currency, exchangeAcronym, issFtse1Industry, issFtse3Sector, assetType
         """
 
         a_counts = {}
