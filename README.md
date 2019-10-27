@@ -9,6 +9,10 @@ Created by Riley Dyer, Richard Zhu, Shreyash Sridhar, and David Zhu, at CalHacks
 ## To Use:
 Load vis_clean.ipynb in Jupyter Notebooks
 
+OR
+
+Load the Gui by running the vis2.py
+
 
 ## Developer To Do:
 
