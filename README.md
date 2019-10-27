@@ -11,7 +11,7 @@ Load vis_clean.ipynb in Jupyter Notebooks
 
 OR
 
-Load the Gui by running vis2.py
+Load the Gui by running vis3.py
 
 
 ## Developer To Do:
