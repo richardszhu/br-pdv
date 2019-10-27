@@ -7,11 +7,11 @@ Utilizes Blackrock API to "fetch data" and create a tool to visualize diversity 
 
 
 ## To Use:
-Load vis_clean.ipynb in Jupyter Notebooks
+Load the Gui by running vis3.py
 
 OR
 
-Load the Gui by running vis3.py
+Load vis_clean.ipynb in Jupyter Notebooks
 
 
 ## Developer To Do:
