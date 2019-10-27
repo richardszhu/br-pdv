@@ -26,11 +26,10 @@ class Portfolio():
 
         self.params = ''
         for ticker in tickers_list:
-            self.params += "ticker:{},".format(ticker.upper())
+            self.params += "ticker:{},".format(ticker.upper()) #tickers have to be uppercase
         self.params = self.params[:-1]  # cut off the last comma
 
-        portfolioAnalysisRequest = requests.get(
-            "https://www.blackrock.com/tools/hackathon/security-data", params={'identifiers': self.params})
+        portfolioAnalysisRequest = requests.get("https://www.blackrock.com/tools/hackathon/security-data", params={'identifiers': self.params})
         self.p = portfolioAnalysisRequest.json  # get as json object
         self.p_stocks = (self.p)()['resultMap']["SECURITY"][:self.num_tickers] # cut off to take care of "duplicate" stocks that share the same ticker
 
