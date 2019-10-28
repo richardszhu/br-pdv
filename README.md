@@ -13,11 +13,6 @@ OR
 
 Load vis_clean.ipynb in Jupyter Notebooks
 
-
-## Developer To Do:
-
-Create a front end GUI to make it easier to construct a portfolio
-
 ## Resources Used
 http://rockthecode.io/api/
 
