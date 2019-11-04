@@ -9,11 +9,9 @@ Utilizes Blackrock API to request a given security data attribute, and determine
 ## To Use:
 Load the Gui by running vis3.py
 
-OR
+Alternate Option: Load vis_clean.ipynb in Jupyter Notebooks
 
-Load vis_clean.ipynb in Jupyter Notebooks
-
-## Resources Used
+## Resources
 http://rockthecode.io/api/
 
 https://www.blackrock.com/tools/api-tester/hackathon?apiType=securityData
