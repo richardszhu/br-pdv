@@ -2,7 +2,9 @@
 ## ✪ Winning Project of the BlackRock API Prize at CalHacks 6.0
 ## Made by Richard Zhu, Riley Dyer, David Zhu, and Shreyash Sridhar
 
-Utilizes Blackrock API to request a given security data attribute, and determines the diversity of an investment portfolio in relation to that attribute (such as Industry, Sector, Country, or Asset Type). This is then visualized using MatPlotLib. 
+Utilizes Blackrock API to request a given security data attribute, and determines the diversity of an investment portfolio in relation to that attribute (such as Industry, Sector, Country, or Asset Type). This is then visualized using MatPlotLib.
+
+Unfortunately, it can no longer be demoed as BlackRock has sinced closed off the API from the public. 
 
 ## REQUIRES MatPlotLib
 Installation instructions: https://matplotlib.org/users/installing.html
