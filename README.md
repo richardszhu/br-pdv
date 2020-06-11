@@ -7,7 +7,7 @@ Utilizes Blackrock API to request a given security data attribute, and determine
 Unfortunately, it can no longer be demoed as BlackRock has sinced closed off the API from the public. 
 
 ## REQUIRES MatPlotLib
-Installation instructions: https://matplotlib.org/users/installing.html
+https://matplotlib.org/users/installing.html
 
 ## To Use:
 Load the Gui by running vis3.py
