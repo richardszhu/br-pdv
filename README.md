@@ -6,13 +6,12 @@ Utilizes Blackrock API to request a given security data attribute, and determine
 
 Unfortunately, it can no longer be demoed as BlackRock has sinced closed off the API from the public. 
 
-## REQUIRES MatPlotLib
-https://matplotlib.org/users/installing.html
+Requires MatPlotLib: https://matplotlib.org/users/installing.html
 
 ## To Use:
-Load the Gui by running vis3.py
+Load the Gui by running vis.py
 
-Alternate Option: Load vis_clean.ipynb in Jupyter Notebooks
+Alternative: Load vis_clean.ipynb in Jupyter Notebooks
 
 ## Resources
 http://rockthecode.io/api/
