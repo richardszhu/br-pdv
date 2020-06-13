@@ -2,7 +2,7 @@
 ## ✪ Winning Project of the BlackRock API Prize at CalHacks 6.0
 Made by Richard Zhu, Riley Dyer, David Zhu, and Shreyash Sridhar
 
-Utilizes Blackrock's Aladdin API to determine the diversity of an investment portfolio in relation to that a given security attribute (such as Industry, Sector, Country, or Asset Type). This is then visualized using MatPlotLib.
+Utilizes Blackrock's Aladdin API to determine the diversity of an investment portfolio in relation to a given security attribute (such as Industry, Sector, Country, or Asset Type). This is then visualized using MatPlotLib.
 
 Unfortunately, it can no longer be demoed as BlackRock has sinced closed off the API from the public. 
 
